@@ -1058,7 +1058,7 @@ export default function() {
 	test( `computations with dotted names can be accessed (#2807)`, t => {
 		const r = new Ractive({
 			computed: {
-				'foo.bar': '${baz} + 1'
+				'foo\\.bar': '${baz} + 1'
 			},
 			data: { baz: 1 }
 		});
@@ -1183,4 +1183,22 @@ export default function() {
 			t.htmlEqual( fixture.innerHTML, `[1,2,"a","b","c",{"bip":99,"bop":42,"0a":"z","1a":26,"2a":"y","3a":25,"4a":2,"5a":"zip","bif":84},123,2,1]` );
 		});
 	}
+
+	test( `computeds can contain wildcards for keypath matching fun`, t => {
+		let count = 0;
+
+		new Ractive({
+			target: fixture,
+			template: '{{#each list}}{{.wat}}{{/each}}',
+			computed: {
+				'list.*.wat' ( item ) { count++; return item; }
+			},
+			data: {
+				list: [ 1, 2, 3 ]
+			}
+		});
+
+		t.htmlEqual( fixture.innerHTML, '123' );
+		t.equal( count, 3 );
+	});
 }
