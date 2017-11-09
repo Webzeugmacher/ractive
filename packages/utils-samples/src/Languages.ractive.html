@@ -1,0 +1,27 @@
+<template lang="pug">
+  MyComponent Hello, {{ message }}!
+</template>
+
+<style lang="scss">
+  @import 'bootstrap/scss/bootstrap';
+
+  div {
+    @include clearfix;
+    color: red
+  }
+</style>
+
+<script lang="ts">
+  import Ractive from 'ractive'
+  import $ from 'jquery'
+  import MyComponent from './path/to/MyComponent.ractive.html'
+
+  const message:string = 'World'
+
+  export default Ractive.extend({
+    components: { MyComponent },
+    template: Ractive.placeholders.template,
+    css: Ractive.placeholders.style,
+    data: { message }
+  })
+</script>

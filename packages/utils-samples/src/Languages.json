@@ -1,0 +1,20 @@
+{
+  "template": {
+    "source": "\n  MyComponent Hello, {{ message }}!\n",
+    "start": { "line": 1, "column": 21, "offset": 21 },
+    "end": { "line": 3, "column": 0, "offset": 58 },
+    "props": { "lang": "pug" }
+  },
+  "style": {
+    "source": "\n  @import 'bootstrap/scss/bootstrap';\n\n  div {\n    @include clearfix;\n    color: red;\n  }\n",
+    "start": { "line": 5, "column": 19, "offset": 90 },
+    "end": { "line": 12, "column": 0, "offset": 181 },
+    "props": { "lang": "scss" }
+  },
+  "script": {
+    "source": "\n  import $ from 'jquery'\n\n  const message:string = 'World'\n\n  export default {\n    data: { message }\n  }\n",
+    "start": { "line": 14, "column": 18, "offset": 209 },
+    "end": { "line": 22, "column": 0, "offset": 315 },
+    "props": { "lang": "ts" }
+  }
+}

@@ -1,0 +1,22 @@
+<link rel="ractive" name="MyComponent" href="./path/to/MyComponent.ractive.html">
+<link rel="ractive" name="AsyncComponent" href="./path/to/AsyncComponent.ractive.html" async>
+
+<template lang="html">
+  <MyComponent>Hello, {{ message }}!</MyComponent>
+</template>
+
+<style lang="css" scoped>
+  div {
+    color: red
+  }
+</style>
+
+<script lang="js">
+  import $ from 'jquery'
+
+  export default {
+    data: {
+      message: 'World'
+    }
+  }
+</script>

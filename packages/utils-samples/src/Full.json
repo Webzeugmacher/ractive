@@ -1,0 +1,20 @@
+{
+  "template": {
+    "source": "\n  <MyComponent>Hello, {{ message }}!</MyComponent>\n",
+    "start": { "line": 1, "column": 22, "offset": 22 },
+    "end": { "line": 3, "column": 0, "offset": 74 },
+    "props": { "lang": "html" }
+  },
+  "style": {
+    "source": "\n  div {\n    color: red\n  }\n",
+    "start": { "line": 5, "column": 18, "offset": 105 },
+    "end": { "line": 9, "column": 0, "offset": 133 },
+    "props": { "lang": "css" }
+  },
+  "script": {
+    "source": "\n  import $ from 'jquery'\n\n  export default {\n    data: {\n      message: 'World'\n    }\n  }\n",
+    "start": { "line": 11, "column": 18, "offset": 161 },
+    "end": { "line": 19, "column": 0, "offset": 252 },
+    "props": { "lang": "js" }
+  }
+}

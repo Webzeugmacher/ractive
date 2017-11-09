@@ -1,0 +1,11 @@
+{
+  "components": {},
+  "template": {
+    "source": "\n  <h1>Hello world!</h1>\n",
+    "start": { "line": 1, "column": 10, "offset": 10 },
+    "end": { "line": 3, "column": 0, "offset": 35 },
+    "props": { "lang": "html" }
+  },
+  "style": null,
+  "script": null
+}
